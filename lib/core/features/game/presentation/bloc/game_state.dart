@@ -19,3 +19,25 @@ class DiceRollResult extends GameState {
   @override
   List<Object> get props => [value];
 }
+
+class GameInProgress extends GameState {
+  final List<int> playerPositions;
+  final int currentPlayerIndex;
+  final int? lastRolledValue;
+  final bool isRolling;
+
+  const GameInProgress({
+    required this.playerPositions,
+    required this.currentPlayerIndex,
+    this.lastRolledValue,
+    required this.isRolling,
+  });
+
+  @override
+  List<Object> get props => [
+    playerPositions,
+    currentPlayerIndex,
+    lastRolledValue ?? 0,
+    isRolling,
+  ];
+}

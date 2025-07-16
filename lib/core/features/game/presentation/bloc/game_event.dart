@@ -7,7 +7,4 @@ abstract class GameEvent extends Equatable {
   List<Object> get props => [];
 }
 
-// Example Event
-class RollDiceEvent extends GameEvent {}
-
 class DiceRolled extends GameEvent {}
